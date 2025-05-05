@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Library - Membership</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #34495e;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #0d0e0e;
+
+        }
+
+
+        .content-container {
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container h2,
+        .content-container h3 {
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        .document-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .document-list li {
+            background-color: #ecf0f1;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .document-list li i {
+            margin-right: 10px;
+            color: #1abc9c;
+        }
+
+        .form-container {
+            margin-top: 30px;
+            background: #98d7fc;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #1abc9c;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #16a085;
+        }
+
+        .show-form-button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .show-form-button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Center the form and content */
+        .main-content {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function toggleForm() {
+            const formDiv = document.getElementById("onlineForm");
+            if (formDiv.style.display === "none") {
+                formDiv.style.display = "block";
+            } else {
+                formDiv.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Membership Information</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="books_enhanced.html">Books</a>
+        <a href="timings.html">Timings</a>
+        <a href="membership.html">Membership</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content-container">
+        <div class="main-content">
+            <h2>How to Register</h2>
+            <p>Joining the library is easy and free! Visit the library with the required documents and fill out a registration form.</p>
+
+            <h3>Documents Required</h3>
+            <ul class="document-list">
+                <li><i class="fas fa-id-card"></i> Valid Government-issued ID (Aadhar Card, Passport, etc.)</li>
+                <li><i class="fas fa-photo-video"></i> Recent Passport-size Photograph</li>
+                <li><i class="fas fa-home"></i> Proof of Address (Utility bill, rental agreement, etc.)</li>
+            </ul>
+
+            <h3>Online Membership Registration</h3>
+            <p>You can also register online by clicking the button below:</p>
+            <button class="show-form-button" onclick="toggleForm()">Registration Form</button>
+
+            <div id="onlineForm" class="form-container" style="display:none;">
+                <form action="#" method="post">
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" required><br>
+
+                    <label for="address">Residential Address:</label><br>
+                    <textarea id="address" name="address" rows="4" required></textarea><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Local Library. All rights reserved.
+    </footer>
+</body>
+</html>
